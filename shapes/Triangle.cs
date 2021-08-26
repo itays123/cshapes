@@ -1,5 +1,4 @@
 using System;
-using ConsoleUtils;
 
 namespace Shapes
 {
