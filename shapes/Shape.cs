@@ -1,7 +1,7 @@
 
 namespace Shapes
 {
-    abstract class Shape
+    public abstract class Shape
     {
         protected Shape()
         {
@@ -15,11 +15,6 @@ namespace Shapes
         /**
             Use the console to draw the shape
         */
-        public abstract void Draw();
-
-        /**
-            Use the console to ask the user for constructor params.
-        */
-        public abstract void Initialize();
+        public abstract string Draw();
     }
 }
