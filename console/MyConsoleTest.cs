@@ -1,5 +1,5 @@
 using System;
-namespace MyConsole {
+namespace ConsoleUtils {
     class MyConsoleTest {
         static void Main(string[] args) {
             Console.WriteLine(MyConsole.ReadLine<int>("enter an integer"));

@@ -1,4 +1,6 @@
 ﻿using System;
+using ConsoleUtils;
+using Shapes;
 
 namespace cshapes
 {
@@ -6,7 +8,8 @@ namespace cshapes
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ShapeName shapeName = MyConsole.ReadLine<ShapeName>("Enter shape name (Square/Triangle/Circle)", ShapeName.Square);
+            Console.WriteLine(shapeName);
         }
     }
 }

@@ -1,8 +1,18 @@
 using System;
 
-namespace MyConsole {
+namespace ConsoleUtils {
     static class MyConsole {
-        public static T ReadLine<T>(string label) where T : struct {
+
+        public static T ReadLine<T>(string label, T defaultValue) where T : struct, Enum {
+
+                Console.Write(label + ": ");
+                string input = Console.ReadLine(); 
+                T output;
+                return Enum.TryParse<T>(input, true, out output) ? output : defaultValue;
+           
+        }
+
+        public static T ReadLine<T>(string label) where T : IConvertible {
             try
             {
                 Console.Write(label + ": ");
@@ -16,5 +26,7 @@ namespace MyConsole {
                 return ReadLine<T>(label);
             }
         }
+
+        
     }
 }
